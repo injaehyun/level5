@@ -4,7 +4,7 @@ import { IoIosArrowForward } from 'react-icons/io';
 import { useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie'; 
 
-//라우트 방식 
+
 
 function Main() {
     

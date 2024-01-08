@@ -14,7 +14,7 @@ const [useridpw, setUserIdPw] = useState({
 const navigate = useNavigate();
 
 const navigateToLogin = () => {
-  navigate('/'); 
+  navigate('/login'); 
 };
 
 
