@@ -13,24 +13,20 @@ const Queryclient = new QueryClient();
 
 //
 function App() {
-  
-  
-
-
   return (
     <QueryClientProvider client={Queryclient}>
-<BrowserRouter>
-    <Routes>
-      <Route path='/' element={<Home />} />
-      <Route path='/login' element={<Login />} />
-      <Route path='/join' element={<Join />}/>
-      <Route path='/main' element={<Main />}/>
-      <Route path='/work' element={<Work />}/>
-      <Route path='/todolist' element={<Todolist />}/>
-    </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/join' element={<Join />} />
+          <Route path='/main' element={<Main />} />
+          <Route path='/work' element={<Work />} />
+          <Route path='/todolist' element={<Todolist />} />
+          
+        </Routes>
+      </BrowserRouter>
     </QueryClientProvider>
-    
   );
 }
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import api from '../api/api';
 import { useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie'; 
-import { useEffect } from 'react';
+
 
 function Login() {
   const [useridpw, setUserIdPw] = useState({
@@ -39,9 +39,7 @@ function Login() {
     }
   };
 
- 
-
-  return (
+   return (
     <div>
       <div>
         <h1>로그인하기</h1>
@@ -53,6 +51,17 @@ function Login() {
         }}>
           <h2>아이디</h2>
           <input 
+          style={{
+            width :"98%",
+            height:"40px",
+            display:"flex",
+            justifyContent: "center",
+            alignItems:"center",
+            margin:"5px",
+            backgroundColor:"white",
+            border:"lightgray solid 1px",
+            borderRadius:"10px",
+            }}
             type='text'
             value={useridpw.id}
             onChange={(e) => setUserIdPw({
@@ -61,7 +70,17 @@ function Login() {
             })}
           />
           <h2>비밀번호</h2>
-          <input 
+          <input style={{
+            width :"98%",
+            height:"40px",
+            display:"flex",
+            justifyContent: "center",
+            alignItems:"center",
+            margin:"5px",
+            backgroundColor:"white",
+            border:"lightgray solid 1px",
+            borderRadius:"10px",
+            }}
             type='password'
             value={useridpw.password}
             onChange={(e) => setUserIdPw({
@@ -69,9 +88,38 @@ function Login() {
               password: e.target.value 
             })}
           />
-          <br />
-          <button>로그인</button>
-          <button onClick={navigateToJoin}>회원가입</button>
+          <div style={{
+            display:"flex",
+            flexDirection:"column",
+            justifyContent:"center",
+            alignContent:"center"
+          }}>
+          <button style={{
+            width :"98%",
+            height:"40px",
+            display:"flex",
+            justifyContent: "center",
+            alignItems:"center",
+            margin:"5px",
+            backgroundColor:"#fe531f",
+            border:"none",
+            borderRadius:"10px",
+            color:"white"
+          }}>로그인</button>
+          
+          <button style={{
+            width :"98%",
+            height:"40px",
+            display:"flex",
+            justifyContent: "center",
+            alignItems:"center",
+            margin:"5px",
+            backgroundColor:"#fe531f",
+            border:"none",
+            borderRadius:"10px",
+            color:"white"
+          }} onClick={navigateToJoin}>회원가입</button>
+          </div>
         </form>
       </div>
     </div>    
