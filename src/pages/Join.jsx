@@ -22,13 +22,13 @@ const loginButton = async () => {
   try {
     if (useridpw.id === '' || useridpw.password === '') {
       alert("아이디와 비밀번호를 입력해주세요");
-      return; // 함수 실행을 여기서 중단
+      return; 
     }
 
     const response = await api.post(`/register`, useridpw);
     console.log(response);
 
-    // 회원가입 성공 시 추가적인 동작 (예: 로그인 페이지로 이동)
+    
     
   } catch (error) {
     if (error.response) {

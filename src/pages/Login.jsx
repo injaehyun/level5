@@ -2,12 +2,15 @@ import React, { useState } from 'react';
 import api from '../api/api';
 import { useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie'; 
+import { useEffect } from 'react';
 
 function Login() {
   const [useridpw, setUserIdPw] = useState({
     id: '',
     password: '',
   });
+
+ 
 
   const navigate = useNavigate();
 
@@ -21,13 +24,8 @@ function Login() {
         alert("아이디와 비밀번호를 입력해주세요");
         return;
       }
-
       const response = await api.post(`/login`, useridpw);
-      
-      
       Cookies.set('token', response.data.token);
-
-          
       navigate('/main');
     } catch (error) {
       if (error.response) {
@@ -36,7 +34,12 @@ function Login() {
 
         if (statusCode === 401) {
           alert(errorMessage);
-        }}}};
+        }
+      }
+    }
+  };
+
+ 
 
   return (
     <div>
@@ -67,8 +70,8 @@ function Login() {
             })}
           />
           <br />
-          <button type="submit">로그인</button>
-          <button type="button" onClick={navigateToJoin}>회원가입</button>
+          <button>로그인</button>
+          <button onClick={navigateToJoin}>회원가입</button>
         </form>
       </div>
     </div>    

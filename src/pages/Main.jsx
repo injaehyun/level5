@@ -1,9 +1,10 @@
 import React from 'react';
-import { FaHome } from 'react-icons/fa'; // react-icons 라이브러리 사용
-import { IoIosArrowForward } from 'react-icons/io'; // react-icons 라이브러리 사용
+import { FaHome } from 'react-icons/fa'; 
+import { IoIosArrowForward } from 'react-icons/io'; 
 import { useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie'; 
 
+//라우트 방식 
 
 function Main() {
     
@@ -15,14 +16,14 @@ function Main() {
 
       const logout =() =>{
         Cookies.remove('token'); 
-        navigate(`/`)
+        navigate(`/login`)
       }
 
     return (
     <>
     <div>
       
-      <nav style={{ 
+      <header style={{ 
         position: 'fixed', 
         top: 0, 
         width: '100%', 
@@ -34,8 +35,9 @@ function Main() {
           <FaHome />
         </button>
         <button onClick={logout}>로그아웃</button>
-      </nav>
+      </header>
       </div>
+      
       <div style={{ 
         marginTop: '50px',
        }}>
