@@ -2,7 +2,7 @@ import React from 'react';
 import { FaHome } from 'react-icons/fa'; 
 import { IoIosArrowForward } from 'react-icons/io'; 
 import { useNavigate } from 'react-router-dom';
-import Cookies from 'js-cookie'; 
+
 
 
 
@@ -10,33 +10,10 @@ function Main() {
     
     const navigate = useNavigate();
     
-    const navigateToMain = () => {
-        navigate('/main'); 
-      };
-
-      const logout =() =>{
-        Cookies.remove('token'); 
-        navigate(`/login`)
-      }
-
+  
     return (
     <>
-    <div>
-      
-      <header style={{ 
-        position: 'fixed', 
-        top: 0, 
-        width: '100%', 
-        display: 'flex', 
-        justifyContent: 'space-between', 
-        alignItems: 'center', 
-        borderBottom: '1px solid black' }}>
-        <button onClick={navigateToMain}>
-          <FaHome />
-        </button>
-        <button onClick={logout}>로그아웃</button>
-      </header>
-      </div>
+    
       
       <div style={{ 
         marginTop: '50px',
@@ -57,7 +34,7 @@ function Main() {
         margin: '20px',
         paddingLeft: '10px',
         }}
-        onClick={() => navigate('/work')}
+        onClick={() => navigate('/main/work')}
         >할일 기록하기
           <IoIosArrowForward />
         </div>
@@ -74,7 +51,7 @@ function Main() {
         margin: '20px',
         paddingLeft: '10px',
         }}
-        onClick={() => navigate('/todolist')}
+        onClick={() => navigate('/main/todolist')}
         >ToDo List
           <IoIosArrowForward />
         </div>

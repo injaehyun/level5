@@ -14,10 +14,11 @@ function Home() {
     if (token && showAlert) {
       navigate('/main');
     } else {
+      alert("로그인이 필요합니다.")
       setShowAlert(false)
       navigate('/login')
-      alert("로그인이 필요합니다.")}
-      }, []);
+      }
+    }, []);
 
 
   return (
