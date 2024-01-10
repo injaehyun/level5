@@ -1,78 +1,35 @@
 {
   "register": [
     {
-      "userid": "1234",
-      "password": "1234"
-    },
-    {
-      "useridid": "1234",
-      "password": "1234"
-    },
-    {
-      "useridid": "1231231",
-      "password": "123123123"
-    },
-    {
-      "useridid": "1234",
-      "password": "1234"
-    },
-    {
-      "useridid": "123",
-      "password": "123"
-    },
-    {
-      "id": "111",
-      "password": "111"
-    },
-    {
-      "id": "111",
-      "password": "111"
+      "userid": "123",
+      "password": "123",
+      "id": "1dd5"
     }
   ],
   "login": [
     {
-      "useridid": "1234",
-      "password": "1234"
+      "useridid": "123",
+      "password": "123",
+      "id": "a4d5"
     },
     {
-      "useridid": "1234",
-      "password": "1234"
-    },
-    {
-      "useridid": "1234",
-      "password": "1234"
-    },
-    {
-      "useridid": "1234",
-      "password": "1234"
-    },
-    {
-      "useridid": "12341212412412",
-      "password": "124124124"
-    },
-    {
-      "id": "111",
-      "password": "111"
+      "id": "c88b",
+      "userid": "123",
+      "password": "123"
     }
   ],
   "todos": [
     {
-      "id": "fe46",
-      "username": "12321",
-      "title": "123123",
-      "body": "123123123123123"
+      "id": "1629",
+      "username": "2",
+      "title": "2",
+      "body": "2"
     },
     {
-      "id": "a6fd",
-      "username": "12312",
-      "title": "123123123",
-      "body": "123123123"
-    },
-    {
-      "id": "579e",
-      "username": "ㅁㄴㅇㅁㄴ",
-      "title": "ㅇㅁㄴㅇㅁㄴㅇㅁ",
-      "body": "ㄴㅇㅁㄴㅇ"
+      "id": "3796",
+      "username": "1",
+      "title": "1",
+      "body": "1"
     }
   ]
 }

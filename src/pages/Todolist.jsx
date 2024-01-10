@@ -24,13 +24,14 @@ function Todolist() {
     fetchTodos(); 
   }, []); 
 
-  const handleDelete = async (id) => {
+  const handleDelete = async (event, id) => {
+    event.stopPropagation();
     try {
       await api.delete(`/todos/${id}`); 
       const response = await api.get('/todos');
       setTodos(response.data);
     } catch (error) {
-      console.error('Error deleting todo:', error);
+      alert('삭제에 실패했습니다.',error);
     }
   };
 
@@ -52,8 +53,12 @@ function Todolist() {
               <h2>{todo.title}</h2>
               {todo.username}
             </div>
-            <div>
-              <FaTrash style={{ color: 'red' }} onClick={() => handleDelete(todo.id)} />
+            <div >
+            <FaTrash style={{ 
+              color: 'red',
+              width : '30px',
+              height :'30px'
+              }} onClick={(e) => handleDelete(e, todo.id)} />
             </div>
           </StyledTodoItem>
         ))}
