@@ -17,7 +17,12 @@ function Gnb() {
       }
 
   return (
-    <div>
+    <div style={{
+      justifyContent:'center',
+      display:'flex',
+      
+      
+    }}>
              
       <header style={{ 
         position: 'fixed', 
@@ -26,11 +31,27 @@ function Gnb() {
         display: 'flex', 
         justifyContent: 'space-between', 
         alignItems: 'center', 
-        borderBottom: '1px solid black' }}>
-        <button onClick={navigateToMain}>
-          <FaHome />
+        borderBottom: '1px solid black',
+        padding: '10px'
+        }}>
+        <button style={{
+          backgroundColor:'white',
+          border :'none'
+        }} onClick={navigateToMain}>
+          <FaHome style={{
+            width:'30px',
+            height:'30px',
+            
+          }} />
         </button>
-        <button onClick={logout}>로그아웃</button>
+        <button style={{
+          width:'100px',
+          height:'50px',
+          fontSize : '20px',
+          backgroundColor:'white',
+          border :'none'
+          
+        }} onClick={logout}>로그아웃</button>
       </header>
       </div>
   )
